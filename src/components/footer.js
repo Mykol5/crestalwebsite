@@ -20,19 +20,16 @@ export default function Footer() {
 
           <div className="mt-8">
             <p className="text-sm font-medium">Available on:</p>
-            <div className="flex items-center gap-4 mt-2">
+            <div className="flex flex-row items-center gap-4 mt-2">
               <Image src="/googleplay.png" alt="Google Play" width={100} height={30} />
               <Image src="/apple.png" alt="App Store" width={100} height={30} />
             </div>
           </div>
-
-          <p className="text-xs text-gray-500 mt-10">&copy; 2025 All Rights Reserved.</p>
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-wrap gap-x-6 md:gap-x-25 ml-0">
-          {/* Slight margin-left (ml-6) to separate from Crestal section */}
-
+        <div className="flex flex-col sm:flex-row flex-wrap gap-10 w-full md:w-auto">
+          
           {/* Product */}
           <div>
             <h4 className="font-semibold mb-3 text-[#278C7E]">Product</h4>
@@ -59,7 +56,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Privacy */}
+          {/* Privacy + Socials */}
           <div className="flex flex-col justify-between h-full">
             <div>
               <h4 className="font-semibold mb-3 text-[#278C7E]">Privacy</h4>
@@ -71,13 +68,18 @@ export default function Footer() {
             </div>
 
             {/* Social Icons */}
-            <div className="flex gap-0 mt-6">
-              <Image src="/Facebook.png" alt="Facebook" width={50} height={50} />
-              <Image src="/Instagram.png" alt="Instagram" width={50} height={50} />
-              <Image src="/Twitter.png" alt="Twitter" width={50} height={50} />
+            <div className="flex gap-4 mt-6">
+              <Image src="/Facebook.png" alt="Facebook" width={40} height={40} />
+              <Image src="/Instagram.png" alt="Instagram" width={40} height={40} />
+              <Image src="/Twitter.png" alt="Twitter" width={40} height={40} />
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Bottom Line Always at the Bottom */}
+      <div className="mt-10 text-xs text-gray-500 text-center md:text-left">
+        &copy; 2025 All Rights Reserved.
       </div>
     </footer>
   );
