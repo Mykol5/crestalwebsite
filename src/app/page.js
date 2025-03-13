@@ -130,6 +130,73 @@ export default function Home() {
 </section>
 
 
+<section className="bg-white py-16 px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto">
+    {/* Section Header aligned to the left */}
+    <h2 className="text-[18px] sm:text-[20] font-normal mb-8">
+      🎤 Top Songs Right Now
+    </h2>
+
+    {/* Songs Row - Horizontal scroll on mobile */}
+    <div className="flex gap-0 sm:gap-0 overflow-x-auto scrollbar-hide px-1 -mx-1">
+      {/* Song 1 */}
+      <div className="flex-shrink-0 w-[170px]">
+        <img src="/songsmage.png" alt="Song 1" className="w-[150px] h-[150px] object-cover rounded-lg" />
+        <h3 className="text-[16px] font-semibold mt-3">Midnight Love</h3>
+        <p className="text-[12px] font-medium mt-1">Nova Lee</p>
+      </div>
+
+      {/* Song 2 */}
+      <div className="flex-shrink-0 w-[170px]">
+        <img src="/songsmage.png" alt="Song 2" className="w-[150px] h-[150px] object-cover rounded-lg" />
+        <h3 className="text-[16px] font-semibold mt-3">Neon Drive</h3>
+        <p className="text-[12px] font-medium mt-1">Jax Monroe</p>
+      </div>
+
+      {/* Song 3 */}
+      <div className="flex-shrink-0 w-[170px]">
+        <img src="/songsmage.png" alt="Song 3" className="w-[150px] h-[150px] object-cover rounded-lg" />
+        <h3 className="text-[16px] font-semibold mt-3">Electric Storm</h3>
+        <p className="text-[12px] font-medium mt-1">Sky Reed</p>
+      </div>
+
+      {/* Song 4 */}
+      <div className="flex-shrink-0 w-[170px]">
+        <img src="/songsmage.png" alt="Song 4" className="w-[150px] h-[150px] object-cover rounded-lg" />
+        <h3 className="text-[16px] font-semibold mt-3">Golden Hour</h3>
+        <p className="text-[12px] font-medium mt-1">Zoe Keys</p>
+      </div>
+
+      {/* Song 5 */}
+      <div className="flex-shrink-0 w-[170px]">
+        <img src="/songsmage.png" alt="Song 5" className="w-[150px] h-[150px] object-cover rounded-lg" />
+        <h3 className="text-[16px] font-semibold mt-3">Starlight</h3>
+        <p className="text-[12px] font-medium mt-1">Echo Waves</p>
+      </div>
+
+      {/* Song 6 */}
+      <div className="flex-shrink-0 w-[170px]">
+        <img src="/songsmage.png" alt="Song 6" className="w-[150px] h-[150px] object-cover rounded-lg" />
+        <h3 className="text-[16px] font-semibold mt-3">On & On</h3>
+        <p className="text-[12px] font-medium mt-1">Cleo Haze</p>
+      </div>
+
+      {/* Song 7 */}
+      <div className="flex-shrink-0 w-[170px]">
+        <img src="/songsmage.png" alt="Song 7" className="w-[150px] h-[150px] object-cover rounded-lg" />
+        <h3 className="text-[16px] font-semibold mt-3">Rush</h3>
+        <p className="text-[12px] font-medium mt-1">Trey Dune</p>
+      </div>
+
+      {/* Song 8 */}
+      <div className="flex-shrink-0 w-[170px]">
+        <img src="/songsmage.png" alt="Song 8" className="w-[150px] h-[150px] object-cover rounded-lg" />
+        <h3 className="text-[16px] font-semibold mt-3">City Lights</h3>
+        <p className="text-[12px] font-medium mt-1">Mila Stone</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <section className="bg-white py-16 px-4 sm:px-6">
