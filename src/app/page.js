@@ -333,6 +333,137 @@ export default function Home() {
 
 
 
+<section className="bg-white py-20 px-4 sm:px-8">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-0">
+    
+    {/* LEFT: Content Section */}
+    <div className="md:w-[58%] pl-8 sm:pl-12 md:pl-16">
+
+
+{/* Title */}
+<h2 className="text-[40px] font-semibold text-left mb-2 flex items-center gap-3 flex-wrap">
+  🎮
+  The
+  {/* Crestal inside an image */}
+  <div className="relative">
+    <img 
+      src="/recimage.png" // replace with your actual image path
+      alt="Crestal"
+      className="h-12 w-auto"
+    />
+    <span className="absolute inset-0 flex items-center justify-center text-black font-semibold text-[40px]">
+      Crestal
+    </span>
+  </div>
+
+  Experience
+</h2>
+
+
+      {/* Subtext */}
+      <p className="text-[12px] text-gray-600 text-center md:text-left mb-6">
+        Music is more than streaming—it's an experience.
+      </p>
+
+      {/* Features List */}
+      <div className="space-y-6">
+        {/* Feature 1 */}
+        <div className="flex items-start gap-4">
+          <img src="/Frame.png" alt="Sound Clash" className="w-20 h-20 mt-1" />
+          <div>
+            <h4 className="text-[16px] font-semibold mb-1">Sound Clash</h4>
+            <p className="text-sm leading-[150%] text-gray-700 max-w-xs">
+              Vote in head-to-head music battles and help determine which tracks rise to the top.
+            </p>
+          </div>
+        </div>
+
+        {/* Feature 2 */}
+        <div className="flex items-start gap-4">
+          <img src="/Frame1.png" alt="Fan Challenges" className="w-20 h-20 mt-1" />
+          <div>
+            <h4 className="text-[16px] font-semibold mb-1">Endorsement Wars</h4>
+            <p className="text-sm leading-[150%] text-gray-700 max-w-xs">
+              Back your favorite track & compete for top influencer spots in the community.
+            </p>
+          </div>
+        </div>
+
+        {/* Feature 3 */}
+        <div className="flex items-start gap-4">
+          <img src="/Frame2.png" alt="Exclusive Drops" className="w-20 h-20 mt-1" />
+          <div>
+            <h4 className="text-[16px] font-semibold mb-1">Remix Challenges</h4>
+            <p className="text-sm leading-[150%] text-gray-700 max-w-xs">
+            Create your best version & climb the leaderboard with your unique take on tracks.
+            </p>
+          </div>
+        </div>
+
+        {/* Feature 4 */}
+        <div className="flex items-start gap-4">
+          <img src="/Frame3.png" alt="Live Hangouts" className="w-20 h-20 mt-1" />
+          <div>
+            <h4 className="text-[16px] font-semibold mb-1">Group Listens</h4>
+            <p className="text-sm leading-[150%] text-gray-700 max-w-xs">
+            Host a music session & let your friends queue tracks in real time for shared experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* RIGHT: Image Section */}
+    <div className="md:w-[42%]"> 
+      <img 
+        src="/phones.png" 
+        alt="Crestal Experience" 
+        className="w-[470px] h-auto object-contain md:mr-[-20px]" 
+      />
+    </div>
+  </div>
+</section>
+
+
+
+<section className="bg-white py-12 px-4 sm:px-8 text-center">
+  {/* Top Icons */}
+  <div className="flex justify-center items-center gap-8 mb-8">
+    <img src="/googleplay.png" alt="Icon 1" className="w-24 h-8 object-contain" />
+    <img src="/apple.png" alt="Icon 2" className="w-24 h-8 object-contain" />
+  </div>
+
+  {/* Profile Stack + Text */}
+  <div className="flex justify-center items-center gap-3 mb-8">
+    {/* Text */}
+    {/* Profile Stack */}
+    <div className="relative flex -space-x-2">
+      <img src="/proimage.png" alt="Profile 1" className="w-8 h-8 rounded-full border-2 border-white" />
+      <img src="/proimage.png" alt="Profile 2" className="w-8 h-8 rounded-full border-2 border-white" />
+      <img src="/proimage.png" alt="Profile 3" className="w-8 h-8 rounded-full border-2 border-white" />
+      <img src="/proimage.png" alt="Profile 4" className="w-8 h-8 rounded-full border-2 border-white" />
+    </div>
+    <div className="text-left">
+      <p className="text-base font-semibold text-gray-800 leading-tight">
+        517.69 million+ <br />
+        <span className="text-gray-800">Crestal users worldwide</span>
+      </p>
+    </div>
+
+  </div>
+
+  {/* Bottom Image */}
+  <div className="flex justify-center">
+    <img 
+      src="/qrcode.png" 
+      alt="Global Presence" 
+      className="w-[320px] h-auto object-contain mx-auto" 
+    />
+  </div>
+</section>
+
+
+
 
       <section className="relative z-10 bg-black text-white w-full py-20 px-4 sm:px-6 lg:px-20 overflow-hidden">
   <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 relative">
