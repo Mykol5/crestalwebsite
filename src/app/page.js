@@ -54,6 +54,7 @@ export default function Home() {
       </section>
 
 {/* Orange Glow Section */}
+{/* Orange Glow Section */}
 <section className="relative w-full h-[700px] sm:h-[750px] overflow-hidden">
   {/* Background Image */}
   <Image
@@ -95,16 +96,39 @@ export default function Home() {
   </div>
 
   {/* Phone Image Underneath Text */}
-  <div className="absolute top-[47%] left-1/2 transform -translate-x-1/2 z-30">
+  <div className="absolute top-[37%] left-1/2 transform -translate-x-1/2 z-30">
     <Image
       src="/phonetwo.png"
       alt="Phone"
+      width={350}
+      height={820}
+      className="object-contain"
+    />
+  </div>
+
+  {/* Right Overlapping Image */}
+  <div className="absolute z-40 top-[60%] left-1/2 transform translate-x-[220px] sm:translate-x-[50px] -translate-y-1/2">
+    <Image
+      src="/message.png"
+      alt="Right Overlay"
       width={300}
       height={800}
       className="object-contain"
     />
   </div>
+
+  {/* Left Overlapping Image */}
+  <div className="absolute z-40 top-[70%] left-1/2 transform -translate-x-[160px] sm:-translate-x-[290px] -translate-y-1/2">
+    <Image
+      src="/messagetwo.png"
+      alt="Left Overlay"
+      width={300}
+      height={500}
+      className="object-contain"
+    />
+  </div>
 </section>
+
 
 
       <section className="relative z-10 bg-black text-white w-full py-20 px-4 sm:px-6 lg:px-20 overflow-hidden">
