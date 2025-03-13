@@ -131,6 +131,142 @@ export default function Home() {
 
 
 
+
+<section className="bg-white py-16 px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto text-center">
+    {/* Section Header */}
+    <h2 className="text-[28px] sm:text-[35px] font-normal mb-10 sm:mb-12">
+      🔥 Latest Albums
+    </h2>
+
+    {/* Albums Row - Horizontal scroll on mobile */}
+    <div className="flex sm:justify-center gap-6 sm:gap-8 overflow-x-auto scrollbar-hide px-1 -mx-1">
+      {/* Album 1 */}
+      <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+        <img
+          src="/songimage.png"
+          alt="Album 1"
+          className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+        />
+        <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
+        <p className="text-[10px] font-medium mt-1">River Harper</p>
+      </div>
+
+      {/* Album 2 */}
+      <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+        <img
+          src="/songimage2.png"
+          alt="Album 2"
+          className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+        />
+        <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Up to Something</h3>
+        <p className="text-[10px] font-medium mt-1">Chloe Candence</p>
+      </div>
+
+      {/* Album 3 */}
+      <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+        <img
+          src="/songimage.png"
+          alt="Album 3"
+          className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+        />
+        <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Lion Roar</h3>
+        <p className="text-[10px] font-medium mt-1">John Lake</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section className="bg-white py-16 px-4 sm:px-6">
+  <div className="max-w-7xl mx-auto text-center">
+    {/* Section Header */}
+    <h2 className="text-[23px] sm:text-[30px] font-normal mb-10 sm:mb-12">
+      Upcoming Artists
+    </h2>
+
+    {/* Artists Row - Horizontal scroll on mobile */}
+    <div className="flex sm:justify-center gap-6 sm:gap-10 overflow-x-auto scrollbar-hide px-1 -mx-1">
+      {/* Artist 1 */}
+      <div className="flex-shrink-0 w-[100px] text-center">
+        <img
+          src="/artist.png"
+          alt="Artist 1"
+          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+        />
+        <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+      </div>
+
+      {/* Artist 2 */}
+      <div className="flex-shrink-0 w-[100px] text-center">
+        <img
+          src="/artist.png"
+          alt="Artist 2"
+          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+        />
+        <p className="text-[12px] font-semibold mt-2">Sasha Beats</p>
+      </div>
+
+      {/* Artist 3 */}
+      <div className="flex-shrink-0 w-[100px] text-center">
+        <img
+          src="/artist.png"
+          alt="Artist 3"
+          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+        />
+        <p className="text-[12px] font-semibold mt-2">Jayden Sky</p>
+      </div>
+
+      {/* Artist 4 */}
+      <div className="flex-shrink-0 w-[100px] text-center">
+        <img
+          src="/artist.png"
+          alt="Artist 4"
+          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+        />
+        <p className="text-[12px] font-semibold mt-2">Nina Blaze</p>
+      </div>
+
+      {/* Artist 5 */}
+      <div className="flex-shrink-0 w-[100px] text-center">
+        <img
+          src="/artist.png"
+          alt="Artist 5"
+          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+        />
+        <p className="text-[12px] font-semibold mt-2">Leo Quest</p>
+      </div>
+
+      {/* Artist 6 */}
+      <div className="flex-shrink-0 w-[100px] text-center">
+        <img
+          src="/artist.png"
+          alt="Artist 6"
+          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+        />
+        <p className="text-[12px] font-semibold mt-2">Zara Vibe</p>
+      </div>
+
+      {/* Artist 7 */}
+      <div className="flex-shrink-0 w-[100px] text-center">
+        <img
+          src="/artist.png"
+          alt="Artist 7"
+          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+        />
+        <p className="text-[12px] font-semibold mt-2">Eli Drip</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
       <section className="relative z-10 bg-black text-white w-full py-20 px-4 sm:px-6 lg:px-20 overflow-hidden">
   <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 relative">
     
