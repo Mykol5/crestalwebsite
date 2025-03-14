@@ -121,12 +121,12 @@ export default function Home() {
   </div>
 
   {/* Right Overlapping Image */}
-  <div className="absolute z-40 top-[60%] left-1/2 transform translate-x-[220px] sm:translate-x-[50px] -translate-y-1/2">
+  <div className="absolute z-40 top-[70%] left-1/2 transform translate-x-[220px] sm:translate-x-[50px] -translate-y-1/2">
     <Image
       src="/message.png"
       alt="Right Overlay"
-      width={300}
-      height={800}
+      width={400}
+      height={950}
       className="object-contain"
     />
   </div>
@@ -479,6 +479,83 @@ export default function Home() {
     />
   </div>
 </section>
+
+
+
+
+<section className="relative bg-white min-h-screen px-4 sm:px-8 py-8">
+  {/* Inner Black Container */}
+  <div className="absolute bottom-0 left-4 right-4 h-[80%] bg-black border-t-4 border-orange-500 rounded-t-2xl p-6 text-white">
+    
+    {/* Header Row */}
+    <div className="flex justify-between items-start mb-4">
+      <div>
+        <h2 className="text-[28px] font-semibold">Challenges</h2>
+        <p className="text-[12px] text-gray-300 mt-1">
+          Complete challenges to boost your Crestal Score and earn exclusive rewards.
+        </p>
+      </div>
+      <button className="text-[12px] text-orange-500 font-medium">View more</button>
+    </div>
+
+    {/* Challenge Cards Container */}
+    <div className="flex gap-4">
+      {[1, 2, 3].map((_, index) => (
+        <div key={index} className="bg-gray-900 rounded-lg overflow-hidden w-1/3">
+          
+          {/* Image */}
+          <div className="h-36 w-full">
+            <img
+              src="/cardimage.png"
+              alt="Challenge"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Text Info Section */}
+          <div className="bg-[#A1A1A1] text-black p-3 h-[240px] flex flex-col justify-between">
+            <div>
+              {/* Type and Participants */}
+              <div className="flex justify-between text-[10px] text-white mb-2">
+                <span className="bg-black px-2 py-[2px] rounded">Remix</span>
+                <span className="bg-black px-2 py-[2px] rounded">123 participants</span>
+              </div>
+
+              {/* Title */}
+              <h3 className="text-[12px] font-semibold mb-2">Remix Challenge</h3>
+
+              {/* Tags */}
+              <div className="flex gap-2 mb-2">
+                <span className="bg-orange-500 text-black text-[10px] px-2 py-1 rounded-full">Creator</span>
+                <span className="bg-orange-500 text-black text-[10px] px-2 py-1 rounded-full">DJ</span>
+                <span className="bg-orange-500 text-black text-[10px] px-2 py-1 rounded-full">Easy</span>
+              </div>
+
+              {/* Description */}
+              <p className="text-[10px] text-black mt-2">
+                Create your own version of "Neon Dreams" by Electra Pulse
+              </p>
+            </div>
+
+            {/* Bottom Row: Join + Reward */}
+            <div className="flex items-center justify-between mt-4">
+              <button className="flex items-center gap-1 bg-black text-white text-[12px] px-4 py-1 rounded-full">
+                Join <span className="text-white">➔</span>
+              </button>
+              <span className="text-[10px] text-orange-500 font-semibold">
+                Reward: Points Based Cash
+              </span>
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
 
 
 

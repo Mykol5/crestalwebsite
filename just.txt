@@ -1,0 +1,17 @@
+# Redirect all traffic from root domain to www
+[[redirects]]
+  from = "http://crestal.app/*"
+  to = "https://www.crestal.app/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://crestal.app/*"
+  to = "https://www.crestal.app/:splat"
+  status = 301
+  force = true
+
+# Basic build settings (edit if you have specific settings)
+[build]
+  command = "npm run build"
+  publish = "out" # for Next.js static export
