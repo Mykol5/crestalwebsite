@@ -4,54 +4,68 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="bg-white text-black">
-      {/* Hero Section */}
-      <section className="relative min-h-screen w-full overflow-hidden">
-        {/* Background Images */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-          <Image
-            src="/shadow.png"
-            alt="Shadow"
-            width={300}
-            height={300}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain"
-          />
-          <Image
-            src="/logoback.png"
-            alt="Logo Back"
-            width={800}
-            height={800}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 object-contain"
-          />
-        </div>
+{/* Hero Section */}
+<section className="relative min-h-screen w-full overflow-hidden">
+  {/* Background Images */}
+  <div className="absolute inset-0 z-0 pointer-events-none">
+    {/* Shadow */}
+    <Image
+      src="/shadow.png"
+      alt="Shadow"
+      width={310}
+      height={310}
+      className="absolute object-contain"
+      style={{
+        top: '30%',      // Move up/down
+        left: '50%',     // Move left/right
+        transform: 'translate(-50%, -50%)',
+      }}
+    />
 
-        {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 py-24 gap-6 h-full">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
-            The Future of Music Discovery
-          </h1>
-          <p className="text-base sm:text-lg text-gray-700 max-w-xl">
-            Music Beyond Algorithms. Powered by People.
-          </p>
+    {/* Logo Back */}
+    <Image
+      src="/logoback.png"
+      alt="Logo Back"
+      width={600}
+      height={600}
+      className="absolute object-contain"
+      style={{
+        top: '35%',      // Move up/down
+        left: '50%',     // Move left/right
+        transform: 'translate(-50%, -50%)',
+      }}
+    />
+  </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-6">
-            <Link
-              href="#"
-              className="bg-black text-white px-6 py-3 flex items-center gap-2 font-medium text-sm sm:text-base"
-            >
-              Listener & Creators
-              <Image src="/arrowwhite.png" alt="Arrow" width={18} height={18} />
-            </Link>
+  {/* Hero Content */}
+  <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 py-24 gap-6 h-full">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
+      The Future of Music Discovery
+    </h1>
+    <p className="text-base sm:text-lg text-gray-700 max-w-xl">
+      Music Beyond Algorithms. Powered by People.
+    </p>
 
-            <Link
-              href="#"
-              className="bg-white text-black px-6 py-3 border border-black font-medium text-sm sm:text-base flex items-center gap-2"
-            >
-              For Artists
-              <Image src="/arrowblack.png" alt="Arrow" width={18} height={18} />
-            </Link>
-          </div>
-        </div>
-      </section>
+    <div className="flex flex-col sm:flex-row gap-4 mt-6">
+      <Link
+        href="#"
+        className="bg-black text-white px-6 py-3 flex items-center gap-2 font-medium text-sm sm:text-base"
+      >
+        Listener & Creators
+        <Image src="/arrowwhite.png" alt="Arrow" width={18} height={18} />
+      </Link>
+
+      <Link
+        href="#"
+        className="bg-white text-black px-6 py-3 border border-black font-medium text-sm sm:text-base flex items-center gap-2"
+      >
+        For Artists
+        <Image src="/arrowblack.png" alt="Arrow" width={18} height={18} />
+      </Link>
+    </div>
+  </div>
+</section>
+
 
 {/* Orange Glow Section */}
 {/* Orange Glow Section */}
@@ -426,7 +440,7 @@ export default function Home() {
 
 
 
-<section className="bg-white py-12 px-4 sm:px-8 text-center">
+<section className="bg-white py-12 px-4 sm:px-8 text-center relative">
   {/* Top Icons */}
   <div className="flex justify-center items-center gap-8 mb-8">
     <img src="/googleplay.png" alt="Icon 1" className="w-24 h-8 object-contain" />
@@ -435,7 +449,6 @@ export default function Home() {
 
   {/* Profile Stack + Text */}
   <div className="flex justify-center items-center gap-3 mb-8">
-    {/* Text */}
     {/* Profile Stack */}
     <div className="relative flex -space-x-2">
       <img src="/proimage.png" alt="Profile 1" className="w-8 h-8 rounded-full border-2 border-white" />
@@ -444,23 +457,29 @@ export default function Home() {
       <img src="/proimage.png" alt="Profile 4" className="w-8 h-8 rounded-full border-2 border-white" />
     </div>
     <div className="text-left">
-      <p className="text-base font-semibold text-gray-800 leading-tight">
-        517.69 million+ <br />
-        <span className="text-gray-800">Crestal users worldwide</span>
-      </p>
-    </div>
+    <p style={{ fontSize: "13px", fontWeight: 600, lineHeight: "1.4", color: "#1f2937" }}>
+      517.69 million+ <br />
+      <span style={{ fontSize: "11px", color: "#1f2937" }}>Crestal users worldwide</span>
+    </p>
 
+    </div>
   </div>
 
-  {/* Bottom Image */}
-  <div className="flex justify-center">
+  {/* Bottom Image (QR Code) */}
+  <div className="relative w-full h-[220px] flex items-center justify-center">
     <img 
       src="/qrcode.png" 
       alt="Global Presence" 
-      className="w-[320px] h-auto object-contain mx-auto" 
+      className="w-[320px] h-auto object-contain"
+      style={{
+        position: 'relative',
+        left: '35px', // Move it left/right here
+        top: '80px',  // Move it up/down if needed
+      }}
     />
   </div>
 </section>
+
 
 
 
