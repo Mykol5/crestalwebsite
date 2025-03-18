@@ -13,7 +13,7 @@ export default function ArtistsPage() {
       {/* Description */}
       <p className="text-[12px] sm:text-[12px] text-gray-700 leading-relaxed max-w-xl mx-auto mb-10">
         Share your music with the world, track real-time insights,<br />
-        and monetize your streams effortlessly – all in one powerful platforms.
+        and monetize your streams effortlessly – all in one powerful platform.
       </p>
 
       {/* Image */}
