@@ -16,6 +16,12 @@ export default function Header() {
     <header className="w-full bg-white shadow py-4 px-6">
       <div className="flex items-center justify-between">
         {/* Logo */}
+        <Link
+            href="/"
+            className={`text-sm font-medium hover:underline underline-offset-4 ${
+              pathname === "/" ? "text-blue-600 underline" : "text-black"
+            }`}
+          >
         <div className="flex items-center">
           <Image
             src="/crestallogo.png"
@@ -24,6 +30,7 @@ export default function Header() {
             height={40}
           />
         </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-10">
