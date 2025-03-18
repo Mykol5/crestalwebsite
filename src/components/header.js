@@ -4,9 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // or use your preferred icon lib
+import { usePathname } from 'next/navigation';
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
 
   return (
     <header className="w-full bg-white shadow py-4 px-6">
@@ -30,14 +34,18 @@ export default function Header() {
             Listeners & Creators
           </Link>
           <Link
-            href="#"
-            className="text-black text-sm font-medium hover:underline underline-offset-4"
+            href="/artists"
+            className={`text-sm font-medium hover:underline underline-offset-4 ${
+              pathname === "/artists" ? "text-blue-600 underline" : "text-black"
+            }`}
           >
             Artists
           </Link>
+          <Link href="/join">
           <button className="bg-black text-white rounded-full px-10 py-2 text-sm font-semibold hover:opacity-90 transition">
             Join beta
           </button>
+          </Link>
         </nav>
 
         {/* Hamburger for Mobile */}

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="bg-white text-black">
 {/* Hero Section */}
-<section className="relative min-h-screen w-full overflow-hidden">
+<section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
   {/* Background Images */}
   <div className="absolute inset-0 z-0 pointer-events-none">
     {/* Shadow */}
@@ -16,8 +16,8 @@ export default function Home() {
       height={310}
       className="absolute object-contain"
       style={{
-        top: '30%',      // Move up/down
-        left: '50%',     // Move left/right
+        top: '50%',
+        left: '50%',
         transform: 'translate(-50%, -50%)',
       }}
     />
@@ -30,15 +30,15 @@ export default function Home() {
       height={600}
       className="absolute object-contain"
       style={{
-        top: '35%',      // Move up/down
-        left: '50%',     // Move left/right
+        top: '55%',
+        left: '50%',
         transform: 'translate(-50%, -50%)',
       }}
     />
   </div>
 
   {/* Hero Content */}
-  <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 py-24 gap-6 h-full">
+  <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 gap-6">
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold">
       The Future of Music Discovery
     </h1>
@@ -440,15 +440,15 @@ export default function Home() {
 
 
 
-<section className="bg-white py-12 px-4 sm:px-8 text-center relative">
+<section className="bg-white py-0 px-0 sm:px-8 text-center relative">
   {/* Top Icons */}
-  <div className="flex justify-center items-center gap-8 mb-8">
+  <div className="flex justify-center items-center gap-8 mb-6">
     <img src="/googleplay.png" alt="Icon 1" className="w-24 h-8 object-contain" />
     <img src="/apple.png" alt="Icon 2" className="w-24 h-8 object-contain" />
   </div>
 
   {/* Profile Stack + Text */}
-  <div className="flex justify-center items-center gap-3 mb-8">
+  <div className="flex justify-center items-center gap-3 mb-6">
     {/* Profile Stack */}
     <div className="relative flex -space-x-2">
       <img src="/proimage.png" alt="Profile 1" className="w-8 h-8 rounded-full border-2 border-white" />
@@ -457,24 +457,23 @@ export default function Home() {
       <img src="/proimage.png" alt="Profile 4" className="w-8 h-8 rounded-full border-2 border-white" />
     </div>
     <div className="text-left">
-    <p style={{ fontSize: "13px", fontWeight: 600, lineHeight: "1.4", color: "#1f2937" }}>
-      517.69 million+ <br />
-      <span style={{ fontSize: "11px", color: "#1f2937" }}>Crestal users worldwide</span>
-    </p>
-
+      <p style={{ fontSize: "13px", fontWeight: 600, lineHeight: "1.4", color: "#1f2937" }}>
+        517.69 million+ <br />
+        <span style={{ fontSize: "11px", color: "#1f2937" }}>Crestal users worldwide</span>
+      </p>
     </div>
   </div>
 
   {/* Bottom Image (QR Code) */}
-  <div className="relative w-full h-[220px] flex items-center justify-center">
+  <div className="relative w-full h-[180px] flex items-center justify-center">
     <img 
       src="/qrcode.png" 
       alt="Global Presence" 
-      className="w-[320px] h-auto object-contain"
+      className="w-[300px] h-auto object-contain"
       style={{
         position: 'relative',
-        left: '35px', // Move it left/right here
-        top: '80px',  // Move it up/down if needed
+        left: '35px',
+        top: '90px',
       }}
     />
   </div>
@@ -485,7 +484,7 @@ export default function Home() {
 
 <section className="relative bg-white min-h-screen px-4 sm:px-8 py-8">
   {/* Inner Black Container */}
-  <div className="absolute bottom-0 left-4 right-4 h-[80%] bg-black border-t-4 border-orange-500 rounded-t-2xl p-6 text-white">
+  <div className="absolute bottom-0 left-4 right-4 h-[80%] bg-black border-t-4 border-orange-500 rounded-t-2xl p-6 text-white overflow-hidden">
     
     {/* Header Row */}
     <div className="flex justify-between items-start mb-4">
@@ -499,10 +498,12 @@ export default function Home() {
     </div>
 
     {/* Challenge Cards Container */}
-    <div className="flex gap-4">
+    <div className="flex gap-4 overflow-x-auto scrollbar-hide sm:overflow-visible sm:flex-nowrap">
       {[1, 2, 3].map((_, index) => (
-        <div key={index} className="bg-gray-900 rounded-lg overflow-hidden w-1/3">
-          
+        <div
+          key={index}
+          className="bg-gray-900 rounded-lg overflow-hidden min-w-[85%] sm:min-w-0 sm:w-1/3 flex-shrink-0"
+        >
           {/* Image */}
           <div className="h-36 w-full">
             <img
@@ -547,12 +548,12 @@ export default function Home() {
               </span>
             </div>
           </div>
-
         </div>
       ))}
     </div>
   </div>
 </section>
+
 
 
 
