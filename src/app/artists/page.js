@@ -33,16 +33,16 @@ export default function ArtistsPage() {
           <Image
             src="/elipse.png"
             alt="Bottom Layer"
-            width={300}
-            height={200}
-            className="absolute top-20 left-30 w-[75%] object-contain z-10"
+            width={380}
+            height={180}
+            className="absolute top-30 left-30 w-[75%] object-contain z-10"
           />
           <Image
             src="/elipseone.png"
             alt="Middle Layer"
-            width={450}
+            width={550}
             height={300}
-            className="absolute top-10 left-20 w-[80%] object-contain z-20"
+            className="absolute top-20 left-20 w-[80%] object-contain z-20"
           />
           <Image
             src="/guy.png"

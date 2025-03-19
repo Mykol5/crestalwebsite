@@ -48,7 +48,7 @@ export default function Home() {
 
     <div className="flex flex-col sm:flex-row gap-4 mt-6">
       <Link
-        href="#"
+        href="/"
         className="bg-black text-white px-6 py-3 flex items-center gap-2 font-medium text-sm sm:text-base"
       >
         Listener & Creators
@@ -56,7 +56,7 @@ export default function Home() {
       </Link>
 
       <Link
-        href="#"
+        href="/artists"
         className="bg-white text-black px-6 py-3 border border-black font-medium text-sm sm:text-base flex items-center gap-2"
       >
         For Artists
@@ -104,18 +104,19 @@ export default function Home() {
     <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-2 leading-tight">
       🎧 For Listeners & Creators
     </h3>
+    <br></br>
     <p className="text-sm sm:text-base text-white leading-relaxed">
-      Get access to exclusive new and unreleased music, and be able to earn <br /> money for each review you write. Share your honest opinions and help <br /> shape the future of the music industry.
+      Get access to exclusive new and unreleased music, earn money <br /> for each review you write. Share your honest opinions and help <br /> shape the future of the music industry.
     </p>
   </div>
 
   {/* Phone Image Underneath Text -- added 200*/}
-  <div className="absolute top-[37%] left-1/2 transform -translate-x-1/2 z-30">
+  <div className="absolute top-[43%] left-1/2 transform -translate-x-1/2 z-30">
     <Image
-      src="/crestimg.png"
+      src="/phonetwo.png"
       alt="Phone"
-      width={650}
-      height={1850}
+      width={320}
+      height={570}
       className="object-contain"
     />
   </div>
@@ -144,115 +145,88 @@ export default function Home() {
 </section>
 
 
-<section className="bg-white py-16 px-4 sm:px-6">
+
+
+
+<section className="bg-white py-16 px-4 sm:px-6 relative">
   <div className="max-w-7xl mx-auto">
-    {/* Section Header aligned to the left */}
-    <h2 className="text-[18px] sm:text-[20] font-normal mb-8">
+    
+    {/* Section Header - stays visible */}
+    <h2 className="text-[18px] sm:text-[20px] font-normal mb-8 relative z-20">
       🎤 Top Songs Right Now
     </h2>
 
-    {/* Songs Row - Horizontal scroll on mobile */}
-    <div className="flex gap-0 sm:gap-0 overflow-x-auto scrollbar-hide px-1 -mx-1">
-      {/* Song 1 */}
-      <div className="flex-shrink-0 w-[170px]">
-        <img src="/songsmage.png" alt="Song 1" className="w-[150px] h-[150px] object-cover rounded-lg" />
-        <h3 className="text-[16px] font-semibold mt-3">Midnight Love</h3>
-        <p className="text-[12px] font-medium mt-1">Nova Lee</p>
-      </div>
+    {/* Wrapper for song list and overlay */}
+    <div className="relative">
+      {/* Opaque overlay */}
+      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
 
-      {/* Song 2 */}
-      <div className="flex-shrink-0 w-[170px]">
-        <img src="/songsmage.png" alt="Song 2" className="w-[150px] h-[150px] object-cover rounded-lg" />
-        <h3 className="text-[16px] font-semibold mt-3">Neon Drive</h3>
-        <p className="text-[12px] font-medium mt-1">Jax Monroe</p>
-      </div>
-
-      {/* Song 3 */}
-      <div className="flex-shrink-0 w-[170px]">
-        <img src="/songsmage.png" alt="Song 3" className="w-[150px] h-[150px] object-cover rounded-lg" />
-        <h3 className="text-[16px] font-semibold mt-3">Electric Storm</h3>
-        <p className="text-[12px] font-medium mt-1">Sky Reed</p>
-      </div>
-
-      {/* Song 4 */}
-      <div className="flex-shrink-0 w-[170px]">
-        <img src="/songsmage.png" alt="Song 4" className="w-[150px] h-[150px] object-cover rounded-lg" />
-        <h3 className="text-[16px] font-semibold mt-3">Golden Hour</h3>
-        <p className="text-[12px] font-medium mt-1">Zoe Keys</p>
-      </div>
-
-      {/* Song 5 */}
-      <div className="flex-shrink-0 w-[170px]">
-        <img src="/songsmage.png" alt="Song 5" className="w-[150px] h-[150px] object-cover rounded-lg" />
-        <h3 className="text-[16px] font-semibold mt-3">Starlight</h3>
-        <p className="text-[12px] font-medium mt-1">Echo Waves</p>
-      </div>
-
-      {/* Song 6 */}
-      <div className="flex-shrink-0 w-[170px]">
-        <img src="/songsmage.png" alt="Song 6" className="w-[150px] h-[150px] object-cover rounded-lg" />
-        <h3 className="text-[16px] font-semibold mt-3">On & On</h3>
-        <p className="text-[12px] font-medium mt-1">Cleo Haze</p>
-      </div>
-
-      {/* Song 7 */}
-      <div className="flex-shrink-0 w-[170px]">
-        <img src="/songsmage.png" alt="Song 7" className="w-[150px] h-[150px] object-cover rounded-lg" />
-        <h3 className="text-[16px] font-semibold mt-3">Rush</h3>
-        <p className="text-[12px] font-medium mt-1">Trey Dune</p>
-      </div>
-
-      {/* Song 8 */}
-      <div className="flex-shrink-0 w-[170px]">
-        <img src="/songsmage.png" alt="Song 8" className="w-[150px] h-[150px] object-cover rounded-lg" />
-        <h3 className="text-[16px] font-semibold mt-3">City Lights</h3>
-        <p className="text-[12px] font-medium mt-1">Mila Stone</p>
+      {/* Songs Row - behind overlay */}
+      <div className="flex gap-0 sm:gap-0 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
+        {/* Song cards */}
+        {[...Array(8)].map((_, i) => (
+          <div key={i} className="flex-shrink-0 w-[170px]">
+            <img
+              src="/songsmage.png"
+              alt={`Song ${i + 1}`}
+              className="w-[150px] h-[150px] object-cover rounded-lg"
+            />
+            <h3 className="text-[16px] font-semibold mt-3">Song Title {i + 1}</h3>
+            <p className="text-[12px] font-medium mt-1">Artist Name</p>
+          </div>
+        ))}
       </div>
     </div>
   </div>
 </section>
 
 
-<section className="bg-white py-16 px-4 sm:px-6">
+
+<section className="bg-white py-16 px-4 sm:px-6 relative">
   <div className="max-w-7xl mx-auto text-center">
-    {/* Section Header */}
-    <h2 className="text-[28px] sm:text-[35px] font-normal mb-10 sm:mb-12">
+
+    {/* Section Header - stays on top */}
+    <h2 className="text-[28px] sm:text-[35px] font-normal mb-10 sm:mb-12 relative z-20">
       🔥 Latest Albums
     </h2>
 
-    {/* Albums Row - Horizontal scroll on mobile */}
-    <div className="flex sm:justify-center gap-6 sm:gap-8 overflow-x-auto scrollbar-hide px-1 -mx-1">
-      {/* Album 1 */}
-      <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
-        <img
-          src="/songimage.png"
-          alt="Album 1"
-          className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
-        />
-        <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
-        <p className="text-[10px] font-medium mt-1">River Harper</p>
-      </div>
+    {/* Wrapper for albums row and overlay */}
+    <div className="relative">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
 
-      {/* Album 2 */}
-      <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
-        <img
-          src="/songimage2.png"
-          alt="Album 2"
-          className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
-        />
-        <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Up to Something</h3>
-        <p className="text-[10px] font-medium mt-1">Chloe Candence</p>
-      </div>
-
-      {/* Album 3 */}
-      <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
-        <img
-          src="/songimage.png"
-          alt="Album 3"
-          className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
-        />
-        <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Lion Roar</h3>
-        <p className="text-[10px] font-medium mt-1">John Lake</p>
+      {/* Albums Row - sits behind overlay */}
+      <div className="flex sm:justify-center gap-6 sm:gap-8 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
+        {/* Repeat album cards here */}
+        {/* Example Album */}
+        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+          <img
+            src="/songimage.png"
+            alt="Album"
+            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+          />
+          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
+          <p className="text-[10px] font-medium mt-1">River Harper</p>
+        </div>
+        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+          <img
+            src="/songimage.png"
+            alt="Album"
+            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+          />
+          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
+          <p className="text-[10px] font-medium mt-1">River Harper</p>
+        </div>
+        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+          <img
+            src="/songimage.png"
+            alt="Album"
+            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+          />
+          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
+          <p className="text-[10px] font-medium mt-1">River Harper</p>
+        </div>
+        {/* ...Other albums */}
       </div>
     </div>
   </div>
@@ -262,83 +236,96 @@ export default function Home() {
 
 
 
-<section className="bg-white py-16 px-4 sm:px-6">
+
+<section className="bg-white py-16 px-4 sm:px-6 relative">
   <div className="max-w-7xl mx-auto text-center">
-    {/* Section Header */}
-    <h2 className="text-[23px] sm:text-[30px] font-normal mb-10 sm:mb-12">
+
+    {/* Section Header - stays on top */}
+    <h2 className="text-[23px] sm:text-[30px] font-normal mb-10 sm:mb-12 relative z-20">
       Upcoming Artists
     </h2>
 
-    {/* Artists Row - Horizontal scroll on mobile */}
-    <div className="flex sm:justify-center gap-6 sm:gap-10 overflow-x-auto scrollbar-hide px-1 -mx-1">
-      {/* Artist 1 */}
-      <div className="flex-shrink-0 w-[100px] text-center">
-        <img
-          src="/artist.png"
-          alt="Artist 1"
-          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-        />
-        <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-      </div>
+    {/* Wrapper for artists row and overlay */}
+    <div className="relative">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
 
-      {/* Artist 2 */}
-      <div className="flex-shrink-0 w-[100px] text-center">
-        <img
-          src="/artist.png"
-          alt="Artist 2"
-          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-        />
-        <p className="text-[12px] font-semibold mt-2">Sasha Beats</p>
-      </div>
-
-      {/* Artist 3 */}
-      <div className="flex-shrink-0 w-[100px] text-center">
-        <img
-          src="/artist.png"
-          alt="Artist 3"
-          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-        />
-        <p className="text-[12px] font-semibold mt-2">Jayden Sky</p>
-      </div>
-
-      {/* Artist 4 */}
-      <div className="flex-shrink-0 w-[100px] text-center">
-        <img
-          src="/artist.png"
-          alt="Artist 4"
-          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-        />
-        <p className="text-[12px] font-semibold mt-2">Nina Blaze</p>
-      </div>
-
-      {/* Artist 5 */}
-      <div className="flex-shrink-0 w-[100px] text-center">
-        <img
-          src="/artist.png"
-          alt="Artist 5"
-          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-        />
-        <p className="text-[12px] font-semibold mt-2">Leo Quest</p>
-      </div>
-
-      {/* Artist 6 */}
-      <div className="flex-shrink-0 w-[100px] text-center">
-        <img
-          src="/artist.png"
-          alt="Artist 6"
-          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-        />
-        <p className="text-[12px] font-semibold mt-2">Zara Vibe</p>
-      </div>
-
-      {/* Artist 7 */}
-      <div className="flex-shrink-0 w-[100px] text-center">
-        <img
-          src="/artist.png"
-          alt="Artist 7"
-          className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-        />
-        <p className="text-[12px] font-semibold mt-2">Eli Drip</p>
+      {/* Artists Row - sits behind overlay */}
+      <div className="flex sm:justify-center gap-6 sm:gap-10 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
+        {/* Example Artist */}
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        {/* ...Other artists */}
       </div>
     </div>
   </div>
