@@ -76,18 +76,22 @@ export default function Header() {
             Listeners & Creators
           </Link>
           <Link
-            href="#"
-            className="text-black text-sm font-medium hover:underline underline-offset-4"
+            href="/artists"
+            className={`"text-black text-sm font-medium hover:underline underline-offset-4" ${
+              pathname === "/artists" ? "text-blue-600 underline" : "text-black"
+            }`}
             onClick={() => setMenuOpen(false)}
           >
             Artists
           </Link>
+          <Link href="/join">
           <button
             onClick={() => setMenuOpen(false)}
             className="bg-black text-white rounded-full px-10 py-2 text-sm font-semibold hover:opacity-90 transition"
           >
             Join beta
           </button>
+          </Link>
         </div>
       )}
     </header>

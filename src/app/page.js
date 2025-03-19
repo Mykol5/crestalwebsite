@@ -85,7 +85,7 @@ export default function Home() {
   </div>
 
   {/* Text Block */}
-  <div className="absolute top-10 left-1/2 transform -translate-x-1/2 z-30 text-center px-4 max-w-2xl w-full">
+  <div className="absolute top-[62px] left-1/2 transform -translate-x-1/2 z-30 text-center px-4 max-w-2xl w-full">
     <div className="relative mb-4">
       <Image
         src="/crest.png"
@@ -105,23 +105,23 @@ export default function Home() {
       🎧 For Listeners & Creators
     </h3>
     <p className="text-sm sm:text-base text-white leading-relaxed">
-      Get access to exclusive new and unreleased music, and be able to earn money for each review you write. Share your honest opinions and help shape the future of the music industry.
+      Get access to exclusive new and unreleased music, and be able to earn <br /> money for each review you write. Share your honest opinions and help <br /> shape the future of the music industry.
     </p>
   </div>
 
-  {/* Phone Image Underneath Text */}
+  {/* Phone Image Underneath Text -- added 200*/}
   <div className="absolute top-[37%] left-1/2 transform -translate-x-1/2 z-30">
     <Image
-      src="/phonetwo.png"
+      src="/crestimg.png"
       alt="Phone"
-      width={350}
-      height={820}
+      width={650}
+      height={1850}
       className="object-contain"
     />
   </div>
 
   {/* Right Overlapping Image */}
-  <div className="absolute z-40 top-[70%] left-1/2 transform translate-x-[220px] sm:translate-x-[50px] -translate-y-1/2">
+  {/* <div className="absolute z-40 top-[70%] left-1/2 transform translate-x-[220px] sm:translate-x-[50px] -translate-y-1/2">
     <Image
       src="/message.png"
       alt="Right Overlay"
@@ -129,10 +129,10 @@ export default function Home() {
       height={950}
       className="object-contain"
     />
-  </div>
+  </div> */}
 
   {/* Left Overlapping Image */}
-  <div className="absolute z-40 top-[70%] left-1/2 transform -translate-x-[160px] sm:-translate-x-[290px] -translate-y-1/2">
+  {/* <div className="absolute z-40 top-[70%] left-1/2 transform -translate-x-[160px] sm:-translate-x-[290px] -translate-y-1/2">
     <Image
       src="/messagetwo.png"
       alt="Left Overlay"
@@ -140,7 +140,7 @@ export default function Home() {
       height={500}
       className="object-contain"
     />
-  </div>
+  </div> */}
 </section>
 
 
