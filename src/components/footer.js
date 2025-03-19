@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Left Section */}
         <div className="max-w-sm">
           <Image
-            src="/crestallogo.png"
+            src="/crestalnewlogo.png"
             alt="Crestal Logo"
             width={140}
             height={40}

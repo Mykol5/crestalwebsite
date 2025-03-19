@@ -24,7 +24,7 @@ export default function Header() {
           >
         <div className="flex items-center">
           <Image
-            src="/crestallogo.png"
+            src="/crestalnewlogo.png"
             alt="Logo"
             width={120}
             height={40}
