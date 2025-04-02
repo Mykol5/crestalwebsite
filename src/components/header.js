@@ -48,6 +48,14 @@ export default function Header() {
           >
             Artists
           </Link>
+          <Link
+            href="/about"
+            className={`text-sm font-medium hover:underline underline-offset-4 ${
+              pathname === "/about" ? "text-blue-600 underline" : "text-black"
+            }`}
+          >
+            About
+          </Link>
           <Link href="/join">
           <button className="bg-black text-white rounded-full px-10 py-2 text-sm font-semibold hover:opacity-90 transition">
             Join beta
@@ -83,6 +91,15 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
           >
             Artists
+          </Link>
+          <Link
+            href="/about"
+            className={`"text-black text-sm font-medium hover:underline underline-offset-4" ${
+              pathname === "/about" ? "text-blue-600 underline" : "text-black"
+            }`}
+            onClick={() => setMenuOpen(false)}
+          >
+            About
           </Link>
           <Link href="/join">
           <button
