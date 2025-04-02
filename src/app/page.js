@@ -86,7 +86,7 @@ export default function Home() {
 
   {/* Text Block */}
   <div className="absolute top-[62px] left-1/2 transform -translate-x-1/2 z-30 text-center px-4 max-w-2xl w-full">
-    <div className="relative mb-4">
+    <div className="relative mb-2 sm:mb-4">
       <Image
         src="/crest.png"
         alt="Crest Logo"
@@ -101,48 +101,30 @@ export default function Home() {
       </div>
     </div>
 
-    <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-2 leading-tight">
+    <h3 className="text-2xl sm:text-3xl font-semibold text-white mb-1 sm:mb-2 leading-tight">
       🎧 For Listeners & Creators
     </h3>
-    <br></br>
-    <p className="text-sm sm:text-base text-white leading-relaxed">
-      Get access to exclusive new and unreleased music, earn money <br /> for each review you write. Share your honest opinions and help <br /> shape the future of the music industry.
+
+    <p className="text-sm sm:text-base text-white leading-snug max-w-xs sm:max-w-full mx-auto">
+      Get access to exclusive new and unreleased music,  
+      earn money for each review you write. Share your honest  
+      opinions and help shape the future of the music industry.
     </p>
   </div>
 
-  {/* Phone Image Underneath Text -- added 200*/}
-  <div className="absolute top-[43%] left-1/2 transform -translate-x-1/2 z-30">
+  {/* Larger Phone Image Positioned for Both Mobile & Desktop */}
+  <div className="absolute left-1/2 transform -translate-x-1/2 z-30 
+                  bottom-0 sm:top-auto sm:bottom-0 top-[60%]">
     <Image
-      src="/phonetwo.png"
+      src="/phoneimagenewest.png"
       alt="Phone"
-      width={320}
-      height={570}
-      className="object-contain"
+      width={600} 
+      height={1000}
+      className="object-contain max-w-[400px] sm:max-w-[820px]"
     />
   </div>
-
-  {/* Right Overlapping Image */}
-  {/* <div className="absolute z-40 top-[70%] left-1/2 transform translate-x-[220px] sm:translate-x-[50px] -translate-y-1/2">
-    <Image
-      src="/message.png"
-      alt="Right Overlay"
-      width={400}
-      height={950}
-      className="object-contain"
-    />
-  </div> */}
-
-  {/* Left Overlapping Image */}
-  {/* <div className="absolute z-40 top-[70%] left-1/2 transform -translate-x-[160px] sm:-translate-x-[290px] -translate-y-1/2">
-    <Image
-      src="/messagetwo.png"
-      alt="Left Overlay"
-      width={300}
-      height={500}
-      className="object-contain"
-    />
-  </div> */}
 </section>
+
 
 
 

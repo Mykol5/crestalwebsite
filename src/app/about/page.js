@@ -25,7 +25,7 @@ export default function AboutPage() {
   <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 z-50 text-center px-4">
     <h2 className="text-white text-4xl sm:text-5xl font-bold leading-snug">
       Crestal is not a platform. <br />
-      It's a <span className="text-orange-500">movement.</span>
+      It's a <span className="text-white-500">movement.</span>
     </h2>
     <p className="text-sm sm:text-lg text-gray-300 mt-4">
       Music should rise because people love it—not because it's pushed on them.
