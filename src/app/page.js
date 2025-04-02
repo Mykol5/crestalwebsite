@@ -148,190 +148,6 @@ export default function Home() {
 
 
 
-<section className="bg-white py-16 px-4 sm:px-6 relative">
-  <div className="max-w-7xl mx-auto">
-    
-    {/* Section Header - stays visible */}
-    <h2 className="text-[18px] sm:text-[20px] font-normal mb-8 relative z-20">
-      🎤 Top Songs Right Now
-    </h2>
-
-    {/* Wrapper for song list and overlay */}
-    <div className="relative">
-      {/* Opaque overlay */}
-      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
-
-      {/* Songs Row - behind overlay */}
-      <div className="flex gap-0 sm:gap-0 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
-        {/* Song cards */}
-        {[...Array(8)].map((_, i) => (
-          <div key={i} className="flex-shrink-0 w-[170px]">
-            <img
-              src="/songsmage.png"
-              alt={`Song ${i + 1}`}
-              className="w-[150px] h-[150px] object-cover rounded-lg"
-            />
-            <h3 className="text-[16px] font-semibold mt-3">Song Title {i + 1}</h3>
-            <p className="text-[12px] font-medium mt-1">Artist Name</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section className="bg-white py-16 px-4 sm:px-6 relative">
-  <div className="max-w-7xl mx-auto text-center">
-
-    {/* Section Header - stays on top */}
-    <h2 className="text-[28px] sm:text-[35px] font-normal mb-10 sm:mb-12 relative z-20">
-      🔥 Latest Albums
-    </h2>
-
-    {/* Wrapper for albums row and overlay */}
-    <div className="relative">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
-
-      {/* Albums Row - sits behind overlay */}
-      <div className="flex sm:justify-center gap-6 sm:gap-8 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
-        {/* Repeat album cards here */}
-        {/* Example Album */}
-        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
-          <img
-            src="/songimage.png"
-            alt="Album"
-            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
-          />
-          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
-          <p className="text-[10px] font-medium mt-1">River Harper</p>
-        </div>
-        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
-          <img
-            src="/songimage.png"
-            alt="Album"
-            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
-          />
-          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
-          <p className="text-[10px] font-medium mt-1">River Harper</p>
-        </div>
-        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
-          <img
-            src="/songimage.png"
-            alt="Album"
-            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
-          />
-          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
-          <p className="text-[10px] font-medium mt-1">River Harper</p>
-        </div>
-        {/* ...Other albums */}
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-<section className="bg-white py-16 px-4 sm:px-6 relative">
-  <div className="max-w-7xl mx-auto text-center">
-
-    {/* Section Header - stays on top */}
-    <h2 className="text-[23px] sm:text-[30px] font-normal mb-10 sm:mb-12 relative z-20">
-      Upcoming Artists
-    </h2>
-
-    {/* Wrapper for artists row and overlay */}
-    <div className="relative">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
-
-      {/* Artists Row - sits behind overlay */}
-      <div className="flex sm:justify-center gap-6 sm:gap-10 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
-        {/* Example Artist */}
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        <div className="flex-shrink-0 w-[100px] text-center">
-          <img
-            src="/artist.png"
-            alt="Artist"
-            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
-          />
-          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
-        </div>
-        {/* ...Other artists */}
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 
 <section className="bg-white py-20 px-4 sm:px-8">
@@ -445,8 +261,8 @@ export default function Home() {
     </div>
     <div className="text-left">
       <p style={{ fontSize: "13px", fontWeight: 600, lineHeight: "1.4", color: "#1f2937" }}>
-        517.69 million+ <br />
-        <span style={{ fontSize: "11px", color: "#1f2937" }}>Crestal users worldwide</span>
+        A growing userbase <br />
+        <span style={{ fontSize: "11px", color: "#1f2937" }}>Crestal</span>
       </p>
     </div>
   </div>
@@ -486,7 +302,35 @@ export default function Home() {
 
     {/* Challenge Cards Container */}
     <div className="flex gap-4 overflow-x-auto scrollbar-hide sm:overflow-visible sm:flex-nowrap">
-      {[1, 2, 3].map((_, index) => (
+      {[
+        {
+          title: "Music Prediction Challenge",
+          image: "/cardimage.png",
+          type: "Remix",
+          participants: "123 participants",
+          tags: ["Creator", "DJ", "Easy"],
+          description: 'Create your own version of "Neon Dreams" by Electra Pulse',
+          reward: "Points Based Cash",
+        },
+        {
+          title: "Endorsement Streak",
+          image: "/cardimage23.png",
+          type: "Production",
+          participants: "98 participants",
+          tags: ["Producer", "Instrumental", "Hard"],
+          description: 'Create a 60-second instrumental using only synth sounds.',
+          reward: "Exclusive Gear",
+        },
+        {
+          title: "Remix Challenge",
+          image: "/cardimage.png",
+          type: "Rap",
+          participants: "205 participants",
+          tags: ["Hip-Hop", "Freestyle", "Medium"],
+          description: 'Drop your best freestyle over a provided beat.',
+          reward: "Cash Prize",
+        },
+      ].map((challenge, index) => (
         <div
           key={index}
           className="bg-gray-900 rounded-lg overflow-hidden min-w-[85%] sm:min-w-0 sm:w-1/3 flex-shrink-0"
@@ -494,44 +338,44 @@ export default function Home() {
           {/* Image */}
           <div className="h-36 w-full">
             <img
-              src="/cardimage.png"
+              src={challenge.image}
               alt="Challenge"
               className="w-full h-full object-cover"
             />
           </div>
 
           {/* Text Info Section */}
-          <div className="bg-[#A1A1A1] text-black p-3 h-[240px] flex flex-col justify-between">
+          <div className="bg-[#222] text-white p-3 h-[240px] flex flex-col justify-between shadow-md">
             <div>
               {/* Type and Participants */}
               <div className="flex justify-between text-[10px] text-white mb-2">
-                <span className="bg-black px-2 py-[2px] rounded">Remix</span>
-                <span className="bg-black px-2 py-[2px] rounded">123 participants</span>
+                <span className="bg-black px-2 py-[2px] rounded">{challenge.type}</span>
+                <span className="bg-black px-2 py-[2px] rounded">{challenge.participants}</span>
               </div>
 
               {/* Title */}
-              <h3 className="text-[12px] font-semibold mb-2">Remix Challenge</h3>
+              <h3 className="text-[12px] font-semibold mb-2">{challenge.title}</h3>
 
               {/* Tags */}
               <div className="flex gap-2 mb-2">
-                <span className="bg-orange-500 text-black text-[10px] px-2 py-1 rounded-full">Creator</span>
-                <span className="bg-orange-500 text-black text-[10px] px-2 py-1 rounded-full">DJ</span>
-                <span className="bg-orange-500 text-black text-[10px] px-2 py-1 rounded-full">Easy</span>
+                {challenge.tags.map((tag, idx) => (
+                  <span key={idx} className="bg-orange-500 text-black text-[10px] px-2 py-1 rounded-full">
+                    {tag}
+                  </span>
+                ))}
               </div>
 
               {/* Description */}
-              <p className="text-[10px] text-black mt-2">
-                Create your own version of "Neon Dreams" by Electra Pulse
-              </p>
+              <p className="text-[10px] text-gray-300 mt-2">{challenge.description}</p>
             </div>
 
             {/* Bottom Row: Join + Reward */}
             <div className="flex items-center justify-between mt-4">
-              <button className="flex items-center gap-1 bg-black text-white text-[12px] px-4 py-1 rounded-full">
+              <button className="flex items-center gap-1 bg-[#333] text-white text-[12px] px-4 py-1">
                 Join <span className="text-white">➔</span>
               </button>
               <span className="text-[10px] text-orange-500 font-semibold">
-                Reward: Points Based Cash
+                Reward: {challenge.reward}
               </span>
             </div>
           </div>
@@ -540,6 +384,7 @@ export default function Home() {
     </div>
   </div>
 </section>
+
 
 
 

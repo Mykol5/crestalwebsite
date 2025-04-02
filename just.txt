@@ -218,3 +218,196 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+Sections removed form landing page------------
+
+
+
+<section className="bg-white py-16 px-4 sm:px-6 relative">
+  <div className="max-w-7xl mx-auto">
+    
+    {/* Section Header - stays visible */}
+    <h2 className="text-[18px] sm:text-[20px] font-normal mb-8 relative z-20">
+      🎤 Top Songs Right Now
+    </h2>
+
+    {/* Wrapper for song list and overlay */}
+    <div className="relative">
+      {/* Opaque overlay */}
+      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
+
+      {/* Songs Row - behind overlay */}
+      <div className="flex gap-0 sm:gap-0 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
+        {/* Song cards */}
+        {[...Array(8)].map((_, i) => (
+          <div key={i} className="flex-shrink-0 w-[170px]">
+            <img
+              src="/songsmage.png"
+              alt={`Song ${i + 1}`}
+              className="w-[150px] h-[150px] object-cover rounded-lg"
+            />
+            <h3 className="text-[16px] font-semibold mt-3">Song Title {i + 1}</h3>
+            <p className="text-[12px] font-medium mt-1">Artist Name</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section className="bg-white py-16 px-4 sm:px-6 relative">
+  <div className="max-w-7xl mx-auto text-center">
+
+    {/* Section Header - stays on top */}
+    <h2 className="text-[28px] sm:text-[35px] font-normal mb-10 sm:mb-12 relative z-20">
+      🔥 Latest Albums
+    </h2>
+
+    {/* Wrapper for albums row and overlay */}
+    <div className="relative">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
+
+      {/* Albums Row - sits behind overlay */}
+      <div className="flex sm:justify-center gap-6 sm:gap-8 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
+        {/* Repeat album cards here */}
+        {/* Example Album */}
+        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+          <img
+            src="/songimage.png"
+            alt="Album"
+            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+          />
+          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
+          <p className="text-[10px] font-medium mt-1">River Harper</p>
+        </div>
+        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+          <img
+            src="/songimage.png"
+            alt="Album"
+            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+          />
+          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
+          <p className="text-[10px] font-medium mt-1">River Harper</p>
+        </div>
+        <div className="flex-shrink-0 text-left w-[180px] sm:w-auto">
+          <img
+            src="/songimage.png"
+            alt="Album"
+            className="w-[190px] h-[180px] object-cover rounded-lg mx-auto"
+          />
+          <h3 className="text-[18px] sm:text-[20px] font-semibold mt-4">Country Road</h3>
+          <p className="text-[10px] font-medium mt-1">River Harper</p>
+        </div>
+        {/* ...Other albums */}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section className="bg-white py-16 px-4 sm:px-6 relative">
+  <div className="max-w-7xl mx-auto text-center">
+
+    {/* Section Header - stays on top */}
+    <h2 className="text-[23px] sm:text-[30px] font-normal mb-10 sm:mb-12 relative z-20">
+      Upcoming Artists
+    </h2>
+
+    {/* Wrapper for artists row and overlay */}
+    <div className="relative">
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white opacity-92 z-10 rounded-md pointer-events-none" />
+
+      {/* Artists Row - sits behind overlay */}
+      <div className="flex sm:justify-center gap-6 sm:gap-10 overflow-x-auto scrollbar-hide px-1 -mx-1 relative z-0">
+        {/* Example Artist */}
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        <div className="flex-shrink-0 w-[100px] text-center">
+          <img
+            src="/artist.png"
+            alt="Artist"
+            className="w-[100px] h-[100px] object-cover rounded-full mx-auto"
+          />
+          <p className="text-[12px] font-semibold mt-2">Alex Wave</p>
+        </div>
+        {/* ...Other artists */}
+      </div>
+    </div>
+  </div>
+</section>
