@@ -69,7 +69,7 @@ export default function Home() {
 
 {/* Orange Glow Section */}
 {/* Orange Glow Section */}
-<section className="relative w-full h-[700px] sm:h-[750px] overflow-hidden">
+<section className="relative w-full h-[600px] sm:h-[700px] overflow-hidden">
   {/* Background Image */}
   <Image
     src="/bkg.png"
@@ -84,8 +84,8 @@ export default function Home() {
     <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,165,0,0.2)_0%,rgba(9,9,11,0.7)_60%,rgba(9,9,11,1)_100%)] z-20" />
   </div>
 
-  {/* Text Block */}
-  <div className="absolute top-[62px] left-1/2 transform -translate-x-1/2 z-30 text-center px-4 max-w-2xl w-full">
+  {/* Text Block - Adjusted for better spacing */}
+  <div className="absolute top-[40px] sm:top-[50px] left-1/2 transform -translate-x-1/2 z-30 text-center px-4 max-w-2xl w-full">
     <div className="relative mb-2 sm:mb-4">
       <Image
         src="/crest.png"
@@ -112,21 +112,18 @@ export default function Home() {
     </p>
   </div>
 
-  {/* Larger Phone Image Positioned for Both Mobile & Desktop */}
+  {/* Phone Image - Closer to text on all screens */}
   <div className="absolute left-1/2 transform -translate-x-1/2 z-30 
-                  bottom-0 sm:top-auto sm:bottom-0 top-[60%]">
+                  bottom-0 w-full max-w-[90vw] mx-auto">
     <Image
       src="/phoneimagenewest.png"
       alt="Phone"
       width={600} 
       height={1000}
-      className="object-contain max-w-[400px] sm:max-w-[820px]"
+      className="object-contain mx-auto h-[300px] sm:h-[450px] w-auto"
     />
   </div>
 </section>
-
-
-
 
 
 
