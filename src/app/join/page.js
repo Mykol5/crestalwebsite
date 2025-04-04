@@ -11,6 +11,7 @@ export default function JoinPage() {
     phone: "",
     userType: "",
     preferences: [],
+    location: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -64,6 +65,7 @@ export default function JoinPage() {
           phone: "",
           userType: "",
           preferences: [],
+          location: "",
         });
       } else {
         alert(`Error: ${data.error}`);
@@ -192,6 +194,19 @@ export default function JoinPage() {
                     required
                   />
                 </div>
+                
+                <div className="flex-1">
+                    <label className="block text-sm font-medium mb-1">Location</label>
+                    <input
+                      name="location"
+                      type="text"
+                      value={formData.location}
+                      onChange={handleChange}
+                      className="w-full border border-gray-300 rounded px-4 py-2"
+                      required
+                    />
+                  </div>
+
               </div>
 
               <div className="md:w-1/2">
