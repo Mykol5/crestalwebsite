@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <>
-{/* 🎵 Section 1: "Your Music, Their Movement" - Now Full Width & Height */}
 <section className="relative w-full h-screen overflow-hidden">
   {/* Background Image */}
   <Image
@@ -21,39 +20,41 @@ export default function AboutPage() {
     <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,165,0,0.2)_0%,rgba(9,9,11,0.7)_60%,rgba(9,9,11,1)_100%)] z-20" />
   </div>
 
-  {/* Headline Text - Now Above Bottom Image */}
+  {/* Headline Text */}
   <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 z-50 text-center px-4">
-    <h2 className="text-white text-4xl sm:text-5xl font-bold leading-snug">
-      Crestal is not a platform. <br />
-      It's a <span className="text-white-500">movement.</span>
+    <h2 className="text-white text-3xl sm:text-4xl font-bold leading-snug">
+      Crestal is not a platform. It's not a
+      <br />
+      <span className="text-white">movement.</span>
     </h2>
     <p className="text-sm sm:text-lg text-gray-300 mt-4">
       Music should rise because people love it—not because it's pushed on them.
     </p>
   </div>
 
-  {/* Bottom-Aligned Image (Now Smaller) */}
+  {/* Bottom-Aligned Image */}
   <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-30 w-full flex justify-center">
     <Image
       src="/bottomcircle.png"
       alt="Main Visual"
-      width={600}  // 👈 Reduced width
-      height={500} // 👈 Adjusted height
-      className="max-w-[600px] h-auto object-contain"
+      width={600}
+      height={500}
+      className="w-full max-w-[600px] sm:max-w-[600px] h-auto object-contain sm:mb-0 mb-[-40px]"
     />
   </div>
 
-  {/* Overlay Image at the Right Top of Bottom Image */}
-  <div className="absolute bottom-[35%] right-[15%] z-40">
+  {/* Overlay Image Positioned Near Bottom Image */}
+  <div className="absolute bottom-[35%] right-[10%] sm:right-[15%] z-40">
     <Image
       src="/musiciconz.png"
       alt="Overlay"
-      width={100}
-      height={100}
+      width={80}
+      height={80}
       className="object-contain"
     />
   </div>
 </section>
+
 
 
 
