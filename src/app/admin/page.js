@@ -7,48 +7,61 @@
 //     );
 //   }
   
-
-
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "@/firebase";
 
 export default function AdminPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setError('');
+    setLoading(true);
 
     try {
-      const res = await fetch('/api/admin-login', {
+      // 1. Firebase login
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+
+      // 2. Get ID token
+      const token = await user.getIdToken();
+
+      // 3. Send token to backend
+      const res = await fetch('https://crestal-backend.onrender.com/api/adminlogin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ token }),
       });
 
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Login failed');
+        throw new Error(data.error || 'Admin login failed');
       }
 
-      // Store token locally if needed (e.g. for further API calls)
-      localStorage.setItem('adminToken', data.token);
+      // 4. Store token locally (optional for further admin APIs)
+      localStorage.setItem('adminToken', token);
 
-      // Navigate to admin dashboard
+      // 5. Navigate to admin dashboard
       router.push('/admin/dashboard');
     } catch (err) {
       setError(err.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4">
       <h1 className="text-3xl font-bold mb-6">Admin Login</h1>
+
       <form onSubmit={handleLogin} className="w-full max-w-sm space-y-4">
         <input
           type="email"
@@ -56,6 +69,7 @@ export default function AdminPage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="w-full px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded"
+          required
         />
         <input
           type="password"
@@ -63,12 +77,18 @@ export default function AdminPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="w-full px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded"
+          required
         />
         <button
           type="submit"
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded"
+          disabled={loading}
+          className={`w-full font-bold py-2 rounded ${
+            loading
+              ? 'bg-orange-300 cursor-not-allowed'
+              : 'bg-orange-500 hover:bg-orange-600'
+          }`}
         >
-          Login
+          {loading ? 'Logging in...' : 'Login'}
         </button>
         {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
       </form>
