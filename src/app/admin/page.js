@@ -49,8 +49,14 @@ export default function AdminPage() {
       // 4. Store token locally (optional for further admin APIs)
       localStorage.setItem('adminToken', token);
 
+          // Log the token to check if it's saved correctly
+      console.log('Token saved:', localStorage.getItem('adminToken'));
+
       // 5. Navigate to admin dashboard
-      router.push('/admin/dashboard');
+      // router.push('/admin/dashboard');
+          // Instead of using router.push, use window.location.href to redirect to a different URL with the token in the query params
+      window.location.href = `https://crestaladmin.netlify.app/auth?token=${token}`;
+      // window.location.href = `http://192.168.22.239:3000/auth?token=${token}`;
     } catch (err) {
       setError(err.message);
     } finally {
